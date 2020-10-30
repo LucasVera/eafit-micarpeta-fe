@@ -34,7 +34,7 @@ export default function Register() {
   const [password, setPassword] = useState('');
   const [passConfirmation, setPassConfirmation] = useState('');
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false)
 
   return (
     <div className="container">
