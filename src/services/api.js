@@ -19,3 +19,7 @@ export const validateUser = async (id) => {
     return { error: ex.message };
   }
 }
+
+export const createUser = async () => {
+  
+}
