@@ -1,8 +1,13 @@
-# Getting Started with Create React App
+# Mi Carpeta Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Aplicación web para cargar y administrar archivos de usuarios integrados y autenticados por operadores avalados por el gobierno Colombiano
 
-## Available Scripts
+## Hosting:
+- Hosted on netlify. To deploy, simply push code to `qa` branch
+- URL: https://micarpeta.netlify.app/
+
+
+## Bootstraped with create-react-app
 
 In the project directory, you can run:
 
