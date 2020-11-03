@@ -58,3 +58,18 @@ export const registerUser = async (name, nationalId, email, password, address) =
     return { error: ex.message };
   }
 }
+
+export const uploadFileToServer = async (file, user) => {
+  try {
+    const { data } = await axios.post(`${REACT_APP_SERVER_URL}/file/upload`, file, {
+      
+    });
+
+    validateResponse(data);
+
+    return { data: data.data };
+  }
+  catch (ex) {
+    return { error: ex.message };
+  }
+}
