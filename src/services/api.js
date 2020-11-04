@@ -58,3 +58,35 @@ export const registerUser = async (name, nationalId, email, password, address) =
     return { error: ex.message };
   }
 }
+
+export const uploadFileToServer = async (file, user) => {
+  try {
+    console.log('user', user)
+    const { data } = await axios.post(`${REACT_APP_SERVER_URL}/file/upload/${user.nationalId}`, file, {
+      
+    });
+
+    validateResponse(data);
+
+    return { data: data.data };
+  }
+  catch (ex) {
+    return { error: ex.message };
+  }
+}
+
+export const getUserFiles = async (userId) => {
+  try {
+    if (!userId) {
+      throw new Error('Debe ingresar con su cédula y contraseña primero.');
+    }
+    const { data } = await axios.get(`${REACT_APP_SERVER_URL}/files/${userId}`);
+
+    validateResponse(data);
+
+    return { data: data.data };
+  }
+  catch (ex) {
+    return { error: ex.message };
+  }
+}

@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Register from "./Register";
 import CacheContext, { defaultCache } from "../CacheContext";
 import { useState } from "react";
+import Upload from './Upload';
 
 function App() {
   const [cache, setCache] = useState(defaultCache);
@@ -23,6 +24,7 @@ function App() {
           <Header />
           <Route exact path="/" component={Home} />
           <Route exact path="/register" component={Register} />
+          <Route exact path="/upload" component={Upload} />
         </Router>
       </CacheContext.Provider>
     </div>
