@@ -61,7 +61,7 @@ export const registerUser = async (name, nationalId, email, password, address) =
 
 export const uploadFileToServer = async (file, user) => {
   try {
-    const { data } = await axios.post(`${REACT_APP_SERVER_URL}/file/upload`, file, {
+    const { data } = await axios.post(`${REACT_APP_SERVER_URL}/file/upload/${user.nationalId}`, file, {
       
     });
 
