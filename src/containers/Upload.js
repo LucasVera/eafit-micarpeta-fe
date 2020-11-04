@@ -12,7 +12,14 @@ const handleSaveFile = async (file, user, cache, setCache) => {
   data.append('file', file);
 
   try {
-    const ok = await uploadFileToServer(file, user);
+    const { data, error } = await uploadFileToServer(file, user);
+    if (error) {
+      return setError(cache, setCache, error);
+    }
+
+    console.log('data', data);
+
+    setLoading(cache, setCache, false);
   }
   catch (ex) {
     console.log('error', ex)

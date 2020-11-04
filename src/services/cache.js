@@ -9,6 +9,7 @@ export const setError = (cache, setCache, error) => {
 export const setLoading = (cache, setCache, loading = true) => {
   return setCache({
     ...cache,
-    loading
+    loading,
+    error: ''
   });
 }
