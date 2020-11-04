@@ -81,7 +81,7 @@ function Header(props) {
                     <h5 className="text-light">Hola {user.name}</h5>
                   </li>
                   <li className="nav-item">
-                    <button className="btn btn-link btn-secondary btn-sm" onClick={() => setCache({ ...cache, user: {} })}>Salir</button>
+                    <button className="btn btn-link btn-secondary btn-sm" onClick={() => setCache({ ...cache, user: {}, filesFetched: false })}>Salir</button>
                   </li>
                 </ul>
               }
